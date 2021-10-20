@@ -1,4 +1,12 @@
-.title{
+.title {
 	animation-duration: 5s;
+}
+
+.pictures img {
+	width: 100%;
+	height: auto;
+}
+.pictures div {
+	margin-bottom: 25px;
 }
 
