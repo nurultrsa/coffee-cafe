@@ -82,29 +82,16 @@ function opening_hours() {
 
   for (let i = 0; i < document.querySelectorAll(".restaurant").length; i++) {
     /*set opening hours of each restaurant, based on the opening_hours[] array, x being the schedule line*/
-    for (
-      let x = 0;
-      x <
-      document.querySelectorAll(".restaurant")[i].querySelectorAll(".days")
-        .length;
-      x++
-    ) {
-      document.querySelectorAll(".restaurant")[i].querySelectorAll(".days")[
-        x
-      ].innerHTML = write_days(opening_hours[i].days[x]);
-      document.querySelectorAll(".restaurant")[i].querySelectorAll(".hours")[
-        x
-      ].innerHTML = write_hours(opening_hours[i].hours[x]);
-      if (opening == "close" || !opening) {
+    for (let x = 0; x < document.querySelectorAll(".restaurant")[i].querySelectorAll(".days").length; x++) {
+        document.querySelectorAll(".restaurant")[i].querySelectorAll(".days")[x].innerHTML = write_days(opening_hours[i].days[x]);
+        document.querySelectorAll(".restaurant")[i].querySelectorAll(".hours")[x].innerHTML = write_hours(opening_hours[i].hours[x]);
+        if (opening == "close" || !opening) {
         opening_check(opening_hours[i].days[x], opening_hours[i].hours[x]);
       }
     }
-    document.querySelectorAll(".current_date")[i].innerHTML =
-      "Today is " + date.toLocaleDateString("in-ID", options);
-    document.querySelectorAll(".current_time")[i].innerHTML =
-      ", time " + pad2(date.getHours()) + "h" + pad2(date.getMinutes());
-    document.querySelectorAll(".open_check")[i].innerHTML =
-      "So the restaurant is " + opening;
+    document.querySelectorAll(".current_date")[i].innerHTML = "Today is " + date.toLocaleDateString("in-ID", options);
+    document.querySelectorAll(".current_time")[i].innerHTML = ", time " + pad2(date.getHours()) + "h" + pad2(date.getMinutes());
+    document.querySelectorAll(".open_check")[i].innerHTML = "So the restaurant is " + opening;
     opening = null;
   }
 
