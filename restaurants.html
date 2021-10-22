@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Personal CSS -->
+  <title>Coffee & You</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="opening_hours()">
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <img class="mr-2" src="assets/img/coffee-logo.png" alt="coffee">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="restaurants.html">Restaurant<span class="sr-only">(current)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservation.html">Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+	  <div class="container" id="restaurants">
+	    <h1 class="display-4">Restaurant</h1>
+      <p>Success achieved, we ended up cracking up and opened several cafe. Despite everything, we try to stay sober by focusing all our energy on the quality of our serving. Three cafe is enough, don't expect more to appear.</p>
+	    <hr class="my-4">
+      <div class="row mb-4">
+        <div class="col restaurant">
+          <h5>Our first, our pride</h5>
+          <span class="restaurant-adresses">Progo 15, 40115 Bandung</span>
+          <div class="row mt-3">
+            <div class="col-12 col-sm-12 col-md-5">
+              <table class="table table-sm opening_hours">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">Business hours: </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row mt-3">
+                <div class="col">
+                  <span class="current_date"></span><span class="current_time"></span><br>
+                  <span class="open_check"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 mt-2 plan">
+              Access map:
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63374.608627501635!2d107.57931583434244!3d-6.901002973391895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64b004ff221%3A0x1444a06ec346de5!2sSejiwa!5e0!3m2!1sid!2sid!4v1634684361146!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col restaurant">
+        <h5>Our lovely second place</h5>
+        <span class="restaurant-adresses">Golden 8, 15810 Tangerang</span>
+          <div class="row mt-3">
+            <div class="col-12 col-sm-12 col-md-5">
+              <table class="table table-sm opening_hours">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">Business hours: </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row mt-3">
+                <div class="col">
+                  <span class="current_date"></span><span class="current_time"></span><br>
+                  <span class="open_check"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 mt-2 plan">
+              Access map:
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126917.68510173463!2d106.5674578582031!3d-6.240301199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbf3b3e0c9b7%3A0x31989c864bb78d7!2sTurning%20Point%20Coffee!5e0!3m2!1sid!2sid!4v1634684419689!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col restaurant">
+          <h5>Our last, the spoiled one</h5>
+          <span class="restaurant-adresses">Ibnu Armah 7, 16514 Depok</span>
+          <div class="row mt-3">
+            <div class="col-12 col-sm-12 col-md-5">
+              <table class="table table-sm opening_hours">
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">Business hours: </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                  <tr>
+                    <td class="days"></td>
+                    <td class="hours"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row mt-3">
+                <div class="col">
+                  <span class="current_date"></span><span class="current_time"></span><br>
+                  <span class="open_check"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 mt-2 plan">
+              Access map:
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5022075904285!2d106.79491191349726!3d-6.328910586259485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69efc77fbb8e1f%3A0xd9a041b965008a6b!2sWorthland%20coffee!5e0!3m2!1sid!2sid!4v1634684242556!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+      </div>
+	  </div>
+
+    <!-- JS and other bundle -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
