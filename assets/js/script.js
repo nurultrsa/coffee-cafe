@@ -21,13 +21,41 @@ signupLink.onclick = () => {
 };
 
 /*Validation for login*/
-function validate() {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
+let users = [{
+    email: '123@gmail.com',
+    password: '12345'
+},{
+    email: 'kentang@gmail.com',
+    password: 'goreng'
+}];
 
-  localStorage.setItem("email", email);
-  localStorage.setItem("password", password);
+function loginFunction() {
+  const emailLog = document.getElementById("emailLogin").value;
+  const passLog = document.getElementById("passwordLogin").value;
+  
+  for (let i = 0; i < users.length; i++) {
+    if (emailLog === users[i].email && passLog === users[i].password) {
+       return true;
+    } else {
+       return false;
+    }
+  }
 }
+
+/*Script for review*/
+const btn = document.querySelector("button-post");
+const post = document.querySelector(".post");
+const widget = document.querySelector(".star-widget");
+const editBtn = document.querySelector(".edit");
+    btn.onclick = () => {
+    widget.style.display = "none";
+    post.style.display = "block";
+    editBtn.onclick = () => {
+    widget.style.display = "block";
+    post.style.display = "none";
+    }
+      return false;
+    }
 
 /*Script for working hours cafe*/
 function opening_hours() {
