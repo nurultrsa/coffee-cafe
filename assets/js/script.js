@@ -129,5 +129,4 @@ function saveData() {
     "message": message
   })
   localStorage.setItem("users", JSON.stringify(user_records));
-  alert("Reservation successfully made");
 }
