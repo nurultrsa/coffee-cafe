@@ -1,0 +1,62 @@
+.title {
+  animation-duration: 5s;
+}
+
+.front-page {
+  padding: 5rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #72604f;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-control:focus { 
+  border-color: #72604f;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(249, 236, 223, 1);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+.btn-secondary {
+  background-color: #f9ecdf;
+  color: #413b36;
+}
+
+.btn-secondary:hover {
+  background-color: #413b36;
+  color: #f9ecdf;
+  border-color: #72604f;
+}
+
+.titleColor {
+  color: #413b36;
+}
+
+.homeColor {
+  color: #ffff;
+}
+
+/*Styling for image in gallery*/
+.pictures img {
+  width: 100%;
+  height: auto;
+}
+
+.pictures div {
+  margin-bottom: 25px;
+}
