@@ -11,17 +11,17 @@ function opening_hours() {
 
   let opening_hours = [
     {
-      /*restaurant 1*/
+      /*cafe 1*/
       days: [["Mon", "Tue", "Wed"], ["Thu", "Fri", "Sat"], ["Sun"]],
       hours: [[9, 24], [17, 24], [null]],
     },
     {
-      /*restaurant 2*/
+      /*cafe 2*/
       days: [["Mon", "Tue", "Wed"], ["Thu", "Fri", "Sat"], ["Sun"]],
       hours: [[14, 15], [null], [15, 17]],
     },
     {
-      /*restaurant 3*/
+      /*cafe 3*/
       days: [["Mon", "Tue", "Wed"], ["Thu", "Fri", "Sat"], ["Sun"]],
       hours: [[11, 14], [18, 19], [11, 23]],
     },
@@ -45,22 +45,22 @@ function opening_hours() {
     return days + day[day.length - 1];
   }
 
-  for (let i = 0; i < document.querySelectorAll(".restaurant").length; i++) {
-    /*set opening hours of each restaurant, based on the opening_hours[] array, x being the schedule line*/
-    for (let x = 0; x < document.querySelectorAll(".restaurant")[i].querySelectorAll(".days").length; x++) {
-        document.querySelectorAll(".restaurant")[i].querySelectorAll(".days")[x].innerHTML = write_days(opening_hours[i].days[x]);
-        document.querySelectorAll(".restaurant")[i].querySelectorAll(".hours")[x].innerHTML = write_hours(opening_hours[i].hours[x]);
+  for (let i = 0; i < document.querySelectorAll(".cafe").length; i++) {
+    /*set opening hours of each cafe, based on the opening_hours[] array, x being the schedule line*/
+    for (let x = 0; x < document.querySelectorAll(".cafe")[i].querySelectorAll(".days").length; x++) {
+        document.querySelectorAll(".cafe")[i].querySelectorAll(".days")[x].innerHTML = write_days(opening_hours[i].days[x]);
+        document.querySelectorAll(".cafe")[i].querySelectorAll(".hours")[x].innerHTML = write_hours(opening_hours[i].hours[x]);
         if (opening == "close" || !opening) {
         opening_check(opening_hours[i].days[x], opening_hours[i].hours[x]);
       }
     }
     document.querySelectorAll(".current_date")[i].innerHTML = "Today is " + date.toLocaleDateString("in-ID", options);
     document.querySelectorAll(".current_time")[i].innerHTML = ", time " + pad2(date.getHours()) + "h" + pad2(date.getMinutes());
-    document.querySelectorAll(".open_check")[i].innerHTML = "So the restaurant is " + opening;
+    document.querySelectorAll(".open_check")[i].innerHTML = "So the cafe is " + opening;
     opening = null;
   }
 
-  /*function to check if the restaurant is open given the opening hours compared to the current date and time*/
+  /*function to check if the cafe is open given the opening hours compared to the current date and time*/
   function opening_check(days, hour) {
     if (days.includes(string_day(date.getDay()))) {
       if (date.getHours() >= hour[0] && date.getHours() < hour[1]) {
