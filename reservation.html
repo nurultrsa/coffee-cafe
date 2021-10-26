@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+  <!-- Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <!-- Personal CSS -->
   <!-- Personal CSS -->
   <title>Coffee & You</title>
   <link rel="stylesheet" href="assets/css/style.css">
@@ -30,8 +32,8 @@
             <a class="nav-link" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="restaurants.html">Restaurant</a>
-            </li>
+            <a class="nav-link" href="location.html">Location</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="reservation.html">Reservation</a>
           </li>
@@ -41,31 +43,31 @@
         </ul>
       </div>
   </nav>
-  <div class="container">
+	<div class="container titleColor">
 	  <h1 class="display-4">Reservation</h1>
-	  <p>We are more than happy to welcome you. Book your seat to taste once in a lifetime experience with us!</p>
+		<p>We are more than happy to welcome you. Book your seat to taste once in a lifetime experience with us!</p>
       <hr class="my-4">
         <form class="mb-2">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="form-name">Name</label>
-              <input type="text" class="form-control" id="form-name" placeholder="Nurul Trisna Aulya" required>
+              <input type="text" class="form-control" id="name" placeholder="Your name" required>
             </div>
             <div class="form-group col-md-6">
               <label for="form-email">E-mail</label>
-              <input type="email" class="form-control" id="form-email" placeholder="123@gmail.com" required>
+              <input type="email" class="form-control" id="email" placeholder="Your email" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <div class="form-group">
-                <label for="form-nophone">Phone</label>
-                <input type="text" class="form-control" id="form-nophone" placeholder="+62887xxxxxx" required>
+                <label for="form-phone">Phone</label>
+                <input type="text" class="form-control" id="phone" placeholder="Your phone number" required>
               </div>                    
             </div>
             <div class="form-group col-md-6">
               <label for="form-number">Number of Guests</label>
-              <select class="form-control" id="form-number" required>
+              <select class="form-control" id="guests" required>
                 <option>Choose..</option>
                 <option>1 Person</option>
                 <option>2 Person</option>
@@ -77,20 +79,20 @@
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-auto">
               <label for="time">Time</label>
-              <input type="time" class="input" id="form-time" required>               
+              <input type="time" class="form-control" id="rsvTime" required>               
             </div>
-            <div class="form-group col-md-3">
+            <div class="form-group col-auto">
               <label for="date">Date:</label>
-              <input type="date" class="date-picker input" id="form-date" required>
+              <input type="date" class="form-control" id="rsvDate" required>
             </div>
           </div>
           <div class="form-group">
             <label for="form-message">Additional message</label>
-            <textarea class="form-control" id="form-message" rows="3"></textarea>
+            <textarea class="form-control" id="message" rows="3"></textarea>
           </div>
-          <button type="submit" class="btn btn-secondary" onclick="sendFunction()">Send <i class="bi bi-envelope"></i></button>
+          <button type="submit" class="btn btn-secondary" onclick="saveData()">Send <i class="far fa-envelope"></i></button>
         </form>
 	</div>
 

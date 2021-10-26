@@ -1,47 +1,3 @@
-/*Script for styling login and signup form*/
-const loginText = document.querySelector(".title-text .login");
-const loginForm = document.querySelector("form.login");
-const loginBtn = document.querySelector("label.login");
-const signupBtn = document.querySelector("label.signup");
-const signupLink = document.querySelector("form .signup-link a");
-
-signupBtn.onclick = () => {
-  loginForm.style.marginLeft = "-50%";
-  loginText.style.marginLeft = "-50%";
-};
-
-loginBtn.onclick = () => {
-  loginForm.style.marginLeft = "0%";
-  loginText.style.marginLeft = "0%";
-};
-
-signupLink.onclick = () => {
-  signupBtn.click();
-  return false;
-};
-
-/*Validation for login*/
-let users = [{
-    email: '123@gmail.com',
-    password: '12345'
-},{
-    email: 'kentang@gmail.com',
-    password: 'goreng'
-}];
-
-function loginFunction() {
-  const emailLog = document.querySelector("emailLogin").value;
-  const passLog = document.querySelector("passwordLogin").value;
-  
-  for (let i = 0; i < users.length; i++) {
-    if (emailLog == users[i].email && passLog == users[i].password) {
-       return true;
-    } else {
-       return false;
-    }
-  }
-}
-
 /*Script for working hours cafe*/
 function opening_hours() {
   let date = new Date();
@@ -148,4 +104,30 @@ function opening_hours() {
 
 function pad2(number) {
   return (number < 10 ? "0" : "") + number;
+}
+
+/*Script for storing user reservation form in localstorage*/
+function saveData() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let guests = document.getElementById("guests").value;
+  let time = document.getElementById("rsvTime").value;
+  let dateRes = document.getElementById("rsvDate").value;
+  let message = document.getElementById("message").value;
+
+  let user_records = new Array();
+  user_records = JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+
+  user_records.push({
+    "name": name,
+    "email": email,
+    "phone": phone,
+    "guests": guests,
+    "time": time,
+    "date": dateRes,
+    "message": message
+  })
+  localStorage.setItem("users", JSON.stringify(user_records));
+  alert("Reservation successfully made");
 }
